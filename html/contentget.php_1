@@ -1,0 +1,9 @@
+<html>
+<?php
+
+$decode = urldecode($_GET['url']);
+
+$foodlink = file_get_contents($decode);
+echo $foodlink;
+?>
+</html>

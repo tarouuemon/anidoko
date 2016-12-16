@@ -1,0 +1,35 @@
+
+<?php
+
+	//$target_url = "https://anime.dmkt-sp.jp/animestore/sch_pc?searchKey=%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA#!length=20";
+	//$enc_url = urlencode($target_url);
+	//$src_url = "contentget.php?url=" . $enc_url;
+	//echo "<p>" . $src_url . "</p>";
+
+$keyword = urlencode("ガールズ");
+
+
+$decode = urldecode($_GET['site']);
+
+if ($_GET['site'] == 0){
+	//$src_url = "https://www.amazon.co.jp/s/ref=nb_sb_noss_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Dprime-instant-video&field-keywords=" . $keyword;
+	$src_url = "https://anime.dmkt-sp.jp/animestore/sch_pc?searchKey=" . $keyword . "&length=20";
+	$foodlink = file_get_contents($src_url);
+	echo $foodlink;
+	//echo $src_url;
+} else if ($_GET['site'] == 1){
+	$src_url = "https://anime.dmkt-sp.jp/animestore/sch_pc?searchKey=%E3%82%AC%E3%83%BC%E3%83%AB%E3%82%BA#!length=20";
+	//$foodlink = file_get_contents($src_url);
+	//echo $foodlink;
+	echo $src_url;
+} else if ($_GET['site'] == 2){
+	$src_url = "https://www.amazon.co.jp/s/ref=nb_sb_noss_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Dprime-instant-video&field-keywords=" . $keyword;
+	//$foodlink = file_get_contents($src_url);
+	//echo $foodlink;
+	echo $src_url;
+} else {
+	//none
+}
+
+
+?>
