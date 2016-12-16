@@ -118,8 +118,9 @@ ini_set( 'display_errors', 1 );
 	<?php
 
 		if (@$_POST['program']) {
-			$aniName = $_POST['program'];
-			$search_url = "http://localhost/contentget.php?site=0&keyword=" . $aniName;
+			//$aniName = $_POST['program'];
+			$aniName = urlencode($_POST['program']);
+			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=0&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -137,8 +138,9 @@ ini_set( 'display_errors', 1 );
 	<?php
 
 		if (@$_POST['program']) {
-			$aniName = $_POST['program'];
-			$search_url = "http://localhost/contentget.php?site=1&keyword=" . $aniName;
+			//$aniName = $_POST['program'];
+			$aniName = urlencode($_POST['program']);
+			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=1&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -155,8 +157,9 @@ ini_set( 'display_errors', 1 );
 	<?php
 
 		if (@$_POST['program']) {
-			$aniName = $_POST['program'];
-			$search_url = "http://localhost/contentget.php?site=2&keyword=" . $aniName;
+			//$aniName = $_POST['program'];
+			$aniName = urlencode($_POST['program']);
+			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=2&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -174,8 +177,9 @@ ini_set( 'display_errors', 1 );
 	<?php
 
 		if (@$_POST['program']) {
-			$aniName = $_POST['program'];
-			$search_url = "http://localhost/contentget.php?site=3&keyword=" . $aniName;
+			//$aniName = $_POST['program'];
+			$aniName = urlencode($_POST['program']);
+			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=3&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -193,8 +197,9 @@ ini_set( 'display_errors', 1 );
 	<?php
 
 		if (@$_POST['program']) {
-			$aniName = $_POST['program'];
-			$search_url = "http://localhost/contentget.php?site=4&keyword=" . $aniName;
+			//$aniName = $_POST['program'];
+			$aniName = urlencode($_POST['program']);
+			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=4&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			//$html = "準備中";
 			echo $html;
