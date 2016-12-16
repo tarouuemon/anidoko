@@ -15,6 +15,7 @@ if ($_GET['site'] == 0){
 	$doc = phpQuery::newDocument($html);
 	
 	//var_dump($doc);
+	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
 	
 	echo '<div class="alert alert-info" role="alert">';
 	
@@ -25,10 +26,6 @@ if ($_GET['site'] == 0){
 	echo $doc[".headerText"]->text();
 
 	echo '</div>';
-	
-	echo '<br>';
-	
-	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
 	
 	echo '<br>';
 
@@ -63,6 +60,13 @@ if ($_GET['site'] == 0){
 	$doc = phpQuery::newDocument($html);
 	
 	//var_dump($doc);
+	echo '<form name="form1" method="POST" action="http://www.b-ch.com/ttl/search_wrd.php">';
+	echo '<input type=hidden name="search_txt" value="'. urldecode($keyword) .'" />';
+	echo '<input type=hidden name="x" value="0" />';
+	echo '<input type=hidden name="y" value="0" />';
+	echo '</form>';
+	
+	echo '<a href="" onclick="document.form1.submit();return false;" target=”_blank”>検索結果確認</a>';
 	
 	echo '<div class="alert alert-info" role="alert">';
 	
@@ -130,12 +134,6 @@ if ($_GET['site'] == 0){
 
 	echo '<br>';
 
-	echo '<br>';
-	
-	echo '<a href="http://www.b-ch.com/" target="_blank">バンダイチャンネルのページへ</a>';
-
-	echo '<br>';
-
 
 // Amazonプライムビデオ
 // ------------------------
@@ -147,6 +145,7 @@ if ($_GET['site'] == 0){
 	$doc = phpQuery::newDocument($html);
 	
 	//var_dump($doc);
+	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
 	
 	echo '<div class="alert alert-info" role="alert">';
 	
@@ -171,8 +170,7 @@ if ($_GET['site'] == 0){
 	}
 
 	echo '</ul>';
-	echo '<br>';
-	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
+
 	echo '<br>';
 
 // hulu
@@ -202,14 +200,12 @@ if ($_GET['site'] == 0){
 	}
 	echo $i; */
 	
+	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
+	
 	echo '<br>';
 	
 	echo '※表示不可。。。※';
-	
-	echo '<br>';
-	
-	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
-	
+
 	echo '<br>';
 
 // u-next
@@ -220,6 +216,9 @@ if ($_GET['site'] == 0){
 	$html = file_get_contents($src_url);
 	
 	$doc = phpQuery::newDocument($html);
+
+	//var_dump($doc);	
+	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
 	
 	echo '<div class="alert alert-info" role="alert">';
 	
@@ -228,15 +227,6 @@ if ($_GET['site'] == 0){
 	echo '</div>';
 	
 	echo '<br>';
-	
-	
-	//var_dump($doc);
-	
-	echo '<br>';
-	
-	echo '<br>';
-	
-	echo '<a href="' . $src_url . '" target="_blank">検索結果確認</a>';
 	
 	echo '<br>';
 

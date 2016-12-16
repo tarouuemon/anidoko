@@ -64,7 +64,7 @@ ini_set( 'display_errors', 1 );
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="/" class="navbar-brand">あにどこ</a>
+        <a href="" class="navbar-brand">あにどこ</a>
       </div>
     </div>
   </div>
@@ -116,11 +116,13 @@ ini_set( 'display_errors', 1 );
 				<div class="tab-pane fade active in" id="danime">
 
 	<?php
+		
+		$myurl = "http://" . $_SERVER['HTTP_HOST']. "/". basename(dirname($_SERVER['SCRIPT_NAME']));
 
 		if (@$_POST['program']) {
 			//$aniName = $_POST['program'];
 			$aniName = urlencode($_POST['program']);
-			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=0&keyword=" . $aniName;
+			$search_url = $myurl . "/contentget.php?site=0&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -140,7 +142,7 @@ ini_set( 'display_errors', 1 );
 		if (@$_POST['program']) {
 			//$aniName = $_POST['program'];
 			$aniName = urlencode($_POST['program']);
-			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=1&keyword=" . $aniName;
+			$search_url = $myurl . "/contentget.php?site=1&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -159,7 +161,7 @@ ini_set( 'display_errors', 1 );
 		if (@$_POST['program']) {
 			//$aniName = $_POST['program'];
 			$aniName = urlencode($_POST['program']);
-			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=2&keyword=" . $aniName;
+			$search_url = $myurl . "/contentget.php?site=2&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -179,7 +181,7 @@ ini_set( 'display_errors', 1 );
 		if (@$_POST['program']) {
 			//$aniName = $_POST['program'];
 			$aniName = urlencode($_POST['program']);
-			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=3&keyword=" . $aniName;
+			$search_url = $myurl . "/contentget.php?site=3&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			echo $html;
 		} else {
@@ -199,7 +201,7 @@ ini_set( 'display_errors', 1 );
 		if (@$_POST['program']) {
 			//$aniName = $_POST['program'];
 			$aniName = urlencode($_POST['program']);
-			$search_url = "http://anidoko-beta-tarouuemon.c9users.io/contentget.php?site=4&keyword=" . $aniName;
+			$search_url = $myurl . "/contentget.php?site=4&keyword=" . $aniName;
 			$html = file_get_contents($search_url);
 			//$html = "準備中";
 			echo $html;
